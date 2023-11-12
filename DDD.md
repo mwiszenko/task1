@@ -8,13 +8,13 @@ Celem zadania jest zamodelowanie bezpiecznej aplikacji bankowej (fragmentu) wyko
 
 Dla danego zadania zdefiniowano cztery konteksty: Zarządzanie Kontami, Uwierzytelnianie, Zarządzanie Przelewami oraz Współdzielone Jądro. Skupiono się głównie nad rozwinięciem kontekstu Zarządzania Kontami.
 
-| ![bank_model_DDD](https://github.com/mwiszenko/task1/assets/45533659/4c664490-f5fd-467c-a68a-c44da6a8fb14) |
+| ![model_diagram](https://github.com/mwiszenko/task1/assets/45533659/e899d5f5-49e3-4993-a804-23ee8a7e8224) |
 |:--:| 
 | Diagram modelu |
 
 ## Agregaty
 
-Zdefiniowano trzy agregaty: KontoBankowe, Użytkownik, oraz Przelew.
+Zdefiniowano trzy agregaty: KontoBankowe, Użytkownik oraz Przelew.
 
 ## Encje
 
