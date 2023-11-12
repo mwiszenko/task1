@@ -1,4 +1,6 @@
 from project import db, app
+import re
+from sqlalchemy.orm import validates
 
 
 # Customer model
@@ -16,6 +18,18 @@ class Customer(db.Model):
 
     def __repr__(self):
         return f"Customer(ID: {self.id}, Name: {self.name}, City: {self.city}, Age: {self.age})"
+
+    @validates('name')
+    def validate_name(self, _, value):
+        if not re.match(r'^[a-zA-Z\s]*$', value):
+            raise ValueError("Only alphabetic characters and spaces are allowed in the name field.")
+        return value
+
+    @validates('author')
+    def validate_city(self, _, value):
+        if not re.match(r'^[a-zA-Z\s]*$', value):
+            raise ValueError("Only alphabetic characters and spaces are allowed in the city field.")
+        return value
 
 
 with app.app_context():
