@@ -25,7 +25,7 @@ class Customer(db.Model):
             raise ValueError("Only alphabetic characters and spaces are allowed in the name field.")
         return value
 
-    @validates('author')
+    @validates('city')
     def validate_city(self, _, value):
         if not re.match(r'^[a-zA-Z\s]*$', value):
             raise ValueError("Only alphabetic characters and spaces are allowed in the city field.")
